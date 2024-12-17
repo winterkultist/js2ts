@@ -1,0 +1,14 @@
+{
+  "name": "js2ts",
+  "version": "1.0.0",
+  "description": "Javascript to typescript training project",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Stefan Winter",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
