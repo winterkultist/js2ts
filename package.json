@@ -4,10 +4,11 @@
   "description": "Javascript to typescript training project",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "NODE_OPTIONS='--no-warnings --experimental-vm-modules' jest"
   },
   "author": "Stefan Winter",
   "license": "ISC",
+  "type": "module",
   "devDependencies": {
     "jest": "^29.7.0"
   }
