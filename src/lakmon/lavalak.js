@@ -1,9 +1,15 @@
-import Lakmon from './lakmon.js';
+import {Burn, Fireball} from "../attack/attacks.js";
 
-export default class Lavalak extends Lakmon {
-
-    constructor(name, energy) {
-        super(name, 'fire', energy)
-    }
-
+// A high energy fire Lakmon
+export const Lavalak = {
+    element: 'fire',
+    energy: 25,
+    attacks: [
+        Fireball,
+        Burn,
+    ],
+    resistances: [
+        'ice',
+    ],
+    health: 100,
 }
