@@ -21,21 +21,26 @@ Run `npm run test`
 
 ### Change project to Typescript
 
-Run `npm install typescript`
-
-add a `tsconfig.json` on root with 
-
+- Run `npm install typescript`
+- Add a `tsconfig.json` on root with 
 ```
 {
   "compilerOptions": {
     "target": "ES6",
     "outDir": "./dist", // Specify the output folder for compiled JavaScript
-    "allowJs": true
+    "allowJs": true,
+    "strict": false,
+    "moduleResolution": "node"
   },
   "include": ["./src/**/*.ts"] // Specify the path to your TypeScript files
 }
 ```
-Run `tsc`
+- Rename all `.js` files to `.ts`
+- Fix jest
+  - Because jest test methods (like `describe()`, `expect()`) are hacked into global scope in javascript, we need to add the jest types
+  - Run `npm install @types/jest`
+
+- Compile typescript: Run `tsc`
 
 
 ### TBD
