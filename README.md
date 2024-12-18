@@ -8,11 +8,16 @@ Run `npm install`
 
 Run `npm run test`
 
-## TODOs
+## Training
 
 ### Implement a small feature in js
 
-TBD
+- Create a new acid attack in `attack.js`
+- Create a new acid lakmon in `/src/lakmon`, the `Balsamlak` that uses the new attack
+- Create a test in `arena.js` and let the Balsamlak fight another lakmon
+- Write a function `learnNewAttack` wherever you see fit, that learns a lakmon a new attack. (Pushes it into it's attacks array)
+  - This function should throw an error when an attack is learned that has a different element than the lakmon
+  - Write a test for this function
 
 ### Change project to Typescript
 
