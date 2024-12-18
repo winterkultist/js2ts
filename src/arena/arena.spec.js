@@ -3,7 +3,8 @@ import {Snowlak} from "../lakmon/snowlak.js";
 import {fight} from "./arena.js";
 
 describe('Test Arena', () => {
-    it('fight should work', () => {
+
+    it('A Lavalak fights a Snowlak', () => {
         // arrange
         const myLavalak = {...Lavalak, currentEnergy: Lavalak.energy}
         const mySnowlak = {...Snowlak, currentEnergy: Snowlak.energy}
@@ -14,4 +15,5 @@ describe('Test Arena', () => {
         // assert
         expect(result).toBeDefined()
     })
+
 })
