@@ -105,8 +105,10 @@ describe('Test regenerate', () => {
 
     it('should increase current energy', () => {
         // arrange
-        const myLavalak = {...Lavalak}
-        myLavalak.currentEnergy = 2
+        const myLavalak = {
+            ...Lavalak,
+            currentEnergy: 2,
+        }
 
         // act
         regenerate(myLavalak)
@@ -117,8 +119,10 @@ describe('Test regenerate', () => {
 
     it('should not go above initial energy', () => {
         // arrange
-        const myLavalak = {...Lavalak}
-        myLavalak.currentEnergy = 8
+        const myLavalak = {
+            ...Lavalak,
+            currentEnergy: 8,
+        }
 
         // act
         regenerate(myLavalak)
