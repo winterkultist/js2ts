@@ -5,9 +5,11 @@ import {Burn, Fireball} from "../attack/attacks.js";
 describe('Test performRandomPossibleAttack', () => {
     it('should return an attack and consume energy', () => {
         // arrange
-        const myLavalak = {...Lavalak}
-        myLavalak.attacks = [Fireball]
-        myLavalak.currentEnergy = 20
+        const myLavalak = {
+            ...Lavalak,
+            attacks: [Fireball],
+            currentEnergy: 20,
+        }
 
         // act
         const attack = performRandomPossibleAttack(myLavalak)
@@ -19,9 +21,11 @@ describe('Test performRandomPossibleAttack', () => {
 
     it('should return null if currentEnergy is not high enough', () => {
         // arrange
-        const myLavalak = {...Lavalak}
-        myLavalak.attacks = [Fireball]
-        myLavalak.currentEnergy = 3
+        const myLavalak = {
+            ...Lavalak,
+            attacks: [Fireball],
+            currentEnergy: 3,
+        }
 
         // act
         const attack = performRandomPossibleAttack(myLavalak)
@@ -33,15 +37,17 @@ describe('Test performRandomPossibleAttack', () => {
 
     it('should return one attack it has enough energy left', () => {
         // arrange
-        const myLavalak = {...Lavalak}
-        myLavalak.attacks = [
-            {...Fireball, energy: 5},
-            {...Fireball, energy: 5},
-            {...Fireball, energy: 5},
-            {...Fireball, energy: 5},
-            Burn,
-        ]
-        myLavalak.currentEnergy = 3
+        const myLavalak = {
+            ...Lavalak,
+            attacks: [
+                {...Fireball, energy: 5},
+                {...Fireball, energy: 5},
+                {...Fireball, energy: 5},
+                {...Fireball, energy: 5},
+                Burn,
+            ],
+            currentEnergy: 3,
+        }
 
         // act
         const attack = performRandomPossibleAttack(myLavalak)
@@ -67,8 +73,10 @@ describe('Test sufferAttack', () => {
 
     it('should not reduce health of lakmon beyond 0', () => {
         // arrange
-        const myLavalak = {...Lavalak}
-        myLavalak.health = 7
+        const myLavalak = {
+            ...Lavalak,
+            health: 7,
+        }
 
         // act
         sufferAttack(myLavalak, Fireball)
@@ -79,8 +87,10 @@ describe('Test sufferAttack', () => {
 
     it('should halve the amount of damage received when lakmon has a resistance against the attack', () => {
         // arrange
-        const myLavalak = {...Lavalak}
-        myLavalak.resistances = ['fire']
+        const myLavalak = {
+            ...Lavalak,
+            resistances: ['fire'],
+        }
 
         // act
         sufferAttack(myLavalak, Fireball)
