@@ -1,12 +1,12 @@
 export default class Lakmon {
 
     constructor(name, element, energy) {
-        this.name = name;
-        this.element = element;
-        this.energy = energy;
-        this.attacks = [];
-        this.resistances = [];
-        this.health = 100;
+        this.name = name
+        this.element = element
+        this.energy = energy
+        this.attacks = []
+        this.resistances = []
+        this.health = 100
     }
 
     learnNewAttack(attack) {
