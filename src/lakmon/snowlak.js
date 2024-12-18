@@ -2,8 +2,9 @@ import {Chill, Freeze} from "../attack/attacks.js";
 
 // A very resistant ice Lakmon
 export const Snowlak = {
+    name: 'Snowlak',
     element: 'ice',
-    energy: 18,
+    energy: 14,
     attacks: [
         Freeze,
         Chill,
@@ -11,7 +12,7 @@ export const Snowlak = {
     resistances: [
         'poison',
         'acid',
-        'ice',
+        'ice'
     ],
     health: 120,
 }

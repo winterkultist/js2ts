@@ -62,7 +62,7 @@ describe('Test sufferAttack', () => {
         sufferAttack(myLavalak, Fireball)
 
         // assert
-        expect(myLavalak.health).toBe(75)
+        expect(myLavalak.health).toBe(56)
     })
 
     it('should not reduce health of lakmon beyond 0', () => {
@@ -86,7 +86,7 @@ describe('Test sufferAttack', () => {
         sufferAttack(myLavalak, Fireball)
 
         // assert
-        expect(myLavalak.health).toBe(88)
+        expect(myLavalak.health).toBe(78)
     })
 })
 
@@ -96,25 +96,25 @@ describe('Test regenerate', () => {
     it('should increase current energy', () => {
         // arrange
         const myLavalak = {...Lavalak}
-        myLavalak.currentEnergy = 20
+        myLavalak.currentEnergy = 2
 
         // act
         regenerate(myLavalak)
 
         // assert
-        expect(myLavalak.currentEnergy).toBe(21)
+        expect(myLavalak.currentEnergy).toBe(5)
     })
 
     it('should not go above initial energy', () => {
         // arrange
         const myLavalak = {...Lavalak}
-        myLavalak.currentEnergy = 25
+        myLavalak.currentEnergy = 8
 
         // act
         regenerate(myLavalak)
 
         // assert
-        expect(myLavalak.currentEnergy).toBe(25)
+        expect(myLavalak.currentEnergy).toBe(10)
     })
 
 })

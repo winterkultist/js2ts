@@ -1,4 +1,5 @@
 import {shuffleArray} from "../utilities/misc-util.js";
+import getElementIcon from "../utilities/element.js";
 
 export function performRandomPossibleAttack(lakmon) {
     const shuffledAttacks = shuffleArray(lakmon.attacks)
@@ -20,5 +21,10 @@ export const sufferAttack = (lakmon, attack) => {
 }
 
 export const regenerate = (lakmon) => {
-    lakmon.currentEnergy = Math.min(lakmon.currentEnergy + 1, lakmon.energy)
+    lakmon.currentEnergy = Math.min(lakmon.currentEnergy + 3, lakmon.energy)
+}
+
+export const getStatus = (lakmon) => {
+    const paddedHealthString = `${lakmon.health}❤️`.padStart(5)
+    return `${getElementIcon(lakmon.element)}${lakmon.name} [${paddedHealthString}]`
 }

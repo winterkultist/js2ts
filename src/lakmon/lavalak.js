@@ -2,8 +2,9 @@ import {Burn, Fireball} from "../attack/attacks.js";
 
 // A high energy fire Lakmon
 export const Lavalak = {
+    name: 'Lavalak',
     element: 'fire',
-    energy: 25,
+    energy: 10,
     attacks: [
         Fireball,
         Burn,
