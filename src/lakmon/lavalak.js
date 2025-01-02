@@ -8,6 +8,7 @@ export const Lavalak = {
     attacks: [
         Fireball,
         Burn,
+        Chill
     ],
     resistances: [
         'ice',
