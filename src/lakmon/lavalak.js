@@ -1,4 +1,4 @@
-import {Burn, Fireball} from "../attack/attacks.js";
+import {Burn, Fireball, Chill} from "../attack/attacks.js";
 
 // A high energy fire Lakmon
 export const Lavalak = {
