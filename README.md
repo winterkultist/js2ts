@@ -2,6 +2,11 @@
 
 This is a javascript project designed to be transformed into a typescript project
 
+# TODO
+
+Add a small test cheat sheet
+check for index.js
+
 # Setup
 
 Run `npm install`
@@ -12,9 +17,9 @@ Run `npm run test`
 
 ## Implement a small feature in js
 
-- Create a new acid attack in `attack.js`
-- Create a new acid lakmon in `/src/lakmon`, the `Balsamlak` that uses the new attack
-- Create a test in `arena.js` and let the Balsamlak fight another lakmon
+- Create a new attack with `element: 'acid'` in `attack.js`
+- Create a new acid lakmon in the folder `/src/lakmon`, the `Balsamlak` that uses the new attack
+- Create a test in `arena.spec.js` and let the Balsamlak fight another lakmon
 - Write a function `learnNewAttack` wherever you see fit, that learns a lakmon a new attack. (Pushes it into it's attacks array)
   - This function should throw an error when an attack is learned that has a different element than the lakmon
   - Write a test for this function
@@ -22,7 +27,7 @@ Run `npm run test`
 ## Change project to Typescript
 
 - Run `npm install typescript`
-- Add a `tsconfig.json` on root with
+- Create a new file called `tsconfig.json` on root with this content:
 ```
 {
   "compilerOptions": {
@@ -36,10 +41,12 @@ Run `npm run test`
 }
 ```
 - Rename all `.js` files to `.ts`
+  - All import statements have to be changes, so that the .js is removed (eg: `import ... from "../utilities/element"`)
 - Fix jest
   - Because jest test methods (like `describe()`, `expect()`) are hacked into global scope in javascript, we need to add the jest types
   - Run `npm install @types/jest`
 - Compile typescript: Run `tsc`
+  - Nice to have: Add `'tsc': 'tsc'` to your package,json scripts
 - Enjoy your compile javascript code in `/dist` 😊
 
 ### Get jest tests to run
