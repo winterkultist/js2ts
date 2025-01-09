@@ -2,10 +2,12 @@
 
 This is a javascript project designed to be transformed into a typescript project
 
-# TODO
+# TODO @Stefan
 
 Add a small test cheat sheet
 check for index.js
+check why intellij does import from dist, something is broken with tsc build
+rename Lakmon to just Monster
 
 # Setup
 
