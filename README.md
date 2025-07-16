@@ -8,6 +8,7 @@ Add a small test cheat sheet
 check for index.js
 check why intellij does import from dist, something is broken with tsc build
 rename Lakmon to just Monster
+perform possible attack (add a logging, so nullish coalesce can be learned)
 
 # Setup
 
